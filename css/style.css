@@ -1,0 +1,176 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+
+
+/**
+Table of Contents
+**/
+
+
+
+/**
+
+0.Navigation
+1. Main
+2. About
+3. Services
+4. Why Us ?
+5. Process
+6. Mission
+7.Tools
+8.Footer
+
+**/
+
+
+
+/**   0.Navigation  **/
+
+/* Base styling for the navigation bar */
+#kichwa {
+    background-color: #FEE4F6;
+    ;  
+    height: 80px;                
+    position: relative;  /* Needed for absolute positioning inside */
+}
+
+body, html {
+    height: 100%;   /* Ensuring the body takes the full viewport height */
+    margin: 0;      /* Resetting default margin */
+    padding: 0;     /* Resetting default padding */
+    position: relative; /* Setting a point of reference for absolute positioning of child elements */
+}
+
+/* Flex styles for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+/* Spacing for items and making sure the text doesn't wrap */
+.nav-item {
+    margin: 0 40px;  /* Adjusting margins can also help bring the items closer to the logo */
+}
+
+.nav-link {
+    color: black !important;
+    font-size: 0.9rem;
+    white-space: nowrap;  /* Prevents text wrapping */
+}
+
+/* Positioning and resizing the logo */
+.navbar-brand img {
+    width: auto;  
+    height: 80px;  
+    position: absolute;  /* Takes it out of the document flow */
+    bottom: -10px;  /* Adjusts how much you want the logo to overlap the navbar's bottom */
+    left: 50%;  /* Centers the logo */
+    transform: translateX(-50%);  /* Ensures it's perfectly centered */
+}
+
+/* Styling for the navigation items' text */
+.nav-link {
+    font-family: 'Montserrat', sans-serif; /* 'sans-serif' as a fallback font */
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+/* Styling for the main-content header */
+/* Updated styling for the main-content header */
+.main-content h1 {
+    color: #FF66BA;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 110px;
+    letter-spacing: 0.2px;
+    text-align: center;  /* Align the text to the center of its container */
+    margin-top: 100px;    /* Adjust this value based on how much margin you want */
+    margin-bottom: 6px;
+    
+}
+/* Styling for the subheading */
+.main-content h2 {
+    color: #1E1F4B;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin-top: 0; 
+}
+
+/* Styling for the image holder */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Horizontally centers children */
+    height: 100vh;        /* Takes the full viewport height */
+    justify-content: center;  /* Vertically centers children */
+}
+
+h2 {
+    margin-bottom: 20px; /* Add spacing below the subheading. Adjust this as necessary */
+}
+
+.image-holder {
+    width: 420px;
+    height: 420px;
+    background-color: transparent; /* Placeholder background color */
+}
+
+.contact-button {
+    font-family: Montserrat;
+    font-size: 20px;              /* Increase text size */
+    font-weight: 700;
+    line-height: 50px;            /* Adjusted line height */
+    letter-spacing: 0px;
+    text-align: center;
+    color: white;
+    background-color: #FF66BA;
+    border: 3px solid #FF3399;    /* Slightly thicker border */
+    width: 300px;                 /* Same width as the image holder */
+    height: 540px;                /* Adjusted height */
+    display: flex;                /* Using flex to center text both horizontally and vertically */
+    align-items: center;          /* Center text vertically */
+    justify-content: center;      /* Center text horizontally */
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 60px;          /* Slightly larger border radius */
+    min-height: 80px;
+}
+
+.contact-button:hover {
+    background-color: #FF3399;
+    color: white;
+}
+
+/* The hero section */
+.hero-section {
+    background-image: url('images/MainBg1.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center; 
+    padding-bottom: 30px; 
+    position: relative; 
+    z-index: 1;
+}
+
+/* The thin white line indicating the next section */
+.section-divider {
+    height: 2px; 
+    background-color: white;
+    width: 100%;
+    position: relative;
+    top: -2px;
+    z-index: 0;
+}
