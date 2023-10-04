@@ -34,14 +34,14 @@ Table of Contents
     background-color: #FEE4F6;
     ;  
     height: 80px;                
-    position: relative;  /* Needed for absolute positioning inside */
+    position: relative;
 }
 
 body, html {
-    height: 100%;   /* Ensuring the body takes the full viewport height */
-    margin: 0;      /* Resetting default margin */
-    padding: 0;     /* Resetting default padding */
-    position: relative; /* Setting a point of reference for absolute positioning of child elements */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
 
 /* Flex styles for the navbar */
@@ -54,36 +54,37 @@ body, html {
 
 /* Spacing for items and making sure the text doesn't wrap */
 .nav-item {
-    margin: 0 40px;  /* Adjusting margins can also help bring the items closer to the logo */
+    margin: 0 40px;
 }
 
 .nav-link {
     color: black !important;
     font-size: 0.9rem;
-    white-space: nowrap;  /* Prevents text wrapping */
+    white-space: nowrap;
 }
 
 /* Positioning and resizing the logo */
 .navbar-brand img {
     width: auto;  
     height: 80px;  
-    position: absolute;  /* Takes it out of the document flow */
-    bottom: -10px;  /* Adjusts how much you want the logo to overlap the navbar's bottom */
-    left: 50%;  /* Centers the logo */
-    transform: translateX(-50%);  /* Ensures it's perfectly centered */
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Styling for the navigation items' text */
 .nav-link {
-    font-family: 'Montserrat', sans-serif; /* 'sans-serif' as a fallback font */
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 28px;
     letter-spacing: 0px;
     text-align: left;
 }
+
+/**   1.Main  **/
 /* Styling for the main-content header */
-/* Updated styling for the main-content header */
 .main-content h1 {
     color: #FF66BA;
     font-family: 'Montserrat', sans-serif;
@@ -91,8 +92,8 @@ body, html {
     font-weight: 800;
     line-height: 110px;
     letter-spacing: 0.2px;
-    text-align: center;  /* Align the text to the center of its container */
-    margin-top: 100px;    /* Adjust this value based on how much margin you want */
+    text-align: center;
+    margin-top: 100px;
     margin-bottom: 6px;
     
 }
@@ -112,40 +113,41 @@ body, html {
 .main-content {
     display: flex;
     flex-direction: column;
-    align-items: center;  /* Horizontally centers children */
-    height: 100vh;        /* Takes the full viewport height */
-    justify-content: center;  /* Vertically centers children */
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
 }
 
 h2 {
-    margin-bottom: 20px; /* Add spacing below the subheading. Adjust this as necessary */
+    color: #1E1F4B;
+    margin-bottom: 20px;
 }
 
 .image-holder {
     width: 420px;
     height: 420px;
-    background-color: transparent; /* Placeholder background color */
+    background-color: transparent;
 }
 
 .contact-button {
     font-family: Montserrat;
-    font-size: 20px;              /* Increase text size */
+    font-size: 20px;
     font-weight: 700;
-    line-height: 50px;            /* Adjusted line height */
+    line-height: 50px;
     letter-spacing: 0px;
     text-align: center;
     color: white;
     background-color: #FF66BA;
-    border: 3px solid #FF3399;    /* Slightly thicker border */
-    width: 300px;                 /* Same width as the image holder */
-    height: 540px;                /* Adjusted height */
-    display: flex;                /* Using flex to center text both horizontally and vertically */
-    align-items: center;          /* Center text vertically */
-    justify-content: center;      /* Center text horizontally */
+    border: 3px solid #FF3399;
+    width: 300px;
+    height: 540px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 10px;
     cursor: pointer;
     transition: all 0.3s;
-    border-radius: 60px;          /* Slightly larger border radius */
+    border-radius: 60px;
     min-height: 80px;
 }
 
@@ -168,9 +170,302 @@ h2 {
 /* The thin white line indicating the next section */
 .section-divider {
     height: 2px; 
-    background-color: white;
+    background-color: #FF3399;
     width: 100%;
     position: relative;
     top: -2px;
     z-index: 0;
+}
+
+/**   2.About  **/
+/* About Us section background */
+.about-section {
+    background-image: url('path-to-your-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-top: 90px;
+    padding: 50px 0;
+}
+
+.about-section p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    padding-left: 40px;
+    position: relative;
+}
+
+/* CSS for adding the circle */
+.about-section p::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: calc(50% - 4px);
+    width: 8px;
+    height: 8px;
+    background-color: #FF66BA;
+    border-radius: 50%;
+}
+
+
+/* White rounded rectangle with shadow */
+.rectangle-container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+/* Subheading */
+.rectangle-container h2 {
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 800; 
+    margin-bottom: 20px; 
+    text-align: center;
+    color: #1E1F4B;
+}
+
+/* Paragraph text */
+.rectangle-container p {
+    font-family: Montserrat;
+    font-size: 20px;
+    color: #888; 
+    line-height: 1.5; 
+}
+/* Background for Services section */
+.services-section.bg-image {
+    background-image: url('path-to-your-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0; 
+}
+
+/* Style for the subheading */
+.section-subheading {
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 38px;
+    font-weight: 800;
+    color: #1E1F4B;
+    ;
+    margin-bottom: 50px; 
+}
+
+/**   3.Services  **/
+/* White rectangle for each service */
+.service-box {
+    background-color: white;
+    border-radius: 15px; 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); 
+    padding: 30px;
+    margin-bottom: 30px; 
+    text-align: center; 
+    font-family: Montserrat;
+}
+
+/* Style for the service icon */
+.service-icon {
+    width: 151px;
+    height: 151px;
+    margin-bottom: 20px; 
+}
+/* Style for the service subheading */
+.service-subheading {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 800; 
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #FF66BA;  
+    margin: 10px 0; 
+}
+
+/**   4.Why Us?  **/
+/* Section Subheading */
+.section-subheading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 110px;
+    letter-spacing: 0.2px;
+    text-align: left;
+    color: #1E1F4B;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Card Styling */
+.card {
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-subheading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FF66BA;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.card-subheading::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: #FF66BA;
+    border-radius: 50%;
+}
+
+.card-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+.left-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+    margin-top: 98px;
+}
+
+/**   5.Process  **/
+.process-section {
+    margin-bottom: 150px; 
+}
+
+.section-header {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #1E1F4B;
+    margin-bottom: 20px;
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 110px;
+    text-align: center;
+}
+
+
+/* Removes underline from links and adjusts color */
+.btn-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    position: relative;
+}
+
+.btn-link:hover {
+    text-decoration: none;
+}
+
+/* Styling for the number */
+.number {
+    color: #FF66BA;
+    border: 2px solid #FF66BA;
+    border-radius: 50%;
+    padding: 6px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    text-align: center;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+/* Styling for the subheading */
+.subheading {
+    font-weight: bold;
+    color: #1E1F4B;
+    font-size: 26px; 
+    margin-left: 60px;
+}
+
+/* Styling for the indicator icon */
+.indicator {
+    font-size: 20px; 
+    margin-right: 10px;
+}
+
+
+/**   6.Mission  **/
+
+.bg-image-section {
+    background-image: url('C:\Users\user\Desktop\RK Website Project\images\Mission and Vision.png'); /* Replace with the path to your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 644px;
+    height: 1279px;
+    position: relative;
+}
+
+/**   7.Tools  **/
+.tools-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+    color: #1E1F4B;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tools-container {
+    display: flex;
+    justify-content: space-between;
+    width: 1208px;
+    height: 204px;
+    margin: 0 auto;
+    position: relative;
+    top: 5640px; 
+    left: 117px;
+}
+
+.tool-card {
+    background-color: grey;
+    width: 267px;
+    height: 129px;
+    border-radius: 63px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.tool-card img {
+    width: auto;
+    height: 100px; 
+}
+
+.tool-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #FF66BA;
+    text-align: left;
 }

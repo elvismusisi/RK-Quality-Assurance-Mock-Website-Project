@@ -144,4 +144,14 @@ document.getElementById("emailButton").addEventListener("click", function() {
   window.location.href = `mailto:${emailAddress}?subject=${subject}&body=${emailBody}`;
 });
 
+
+
+$(document).ready(function() {
+  $('.process-item').click(function() {
+      const processId = $(this).attr('data-process');
+      $('.process-description').hide();
+      $('#process-' + processId).show();
+  });
+});
+
 //
